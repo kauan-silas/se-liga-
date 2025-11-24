@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Processamento de Dados (CSS)</title>
+    <style>
+        /* [INSERIR O CÓDIGO CSS COMPLETO AQUI] */
+        /* Estilos Gerais */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 30px;
+            background-color: #f4f7f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #007bff;
+            border-bottom: 3px solid #007bff;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+        h2 {
+            color: #28a745;
+            margin-top: 40px;
+        }
+
+        /* Estilos do Mapa Mental (Ciclo de Processamento) */
+        .mind-map {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .stage {
+            flex-basis: 22%;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            text-align: center;
+        }
+        .stage:hover {
+            transform: scale(1.05);
+        }
+        .stage h3 {
+            font-size: 1.5em;
+            margin-top: 0;
+            padding-bottom: 5px;
+            border-bottom: 2px dashed rgba(0, 0, 0, 0.2);
+        }
+        .stage ul {
+            list-style: none;
+            padding: 0;
+            font-size: 0.9em;
+        }
+
+        /* Cores específicas para cada estágio */
+        #input-stage { background-color: #e6f7ff; border: 2px solid #00bfff; }
+        #processing-stage { background-color: #fffbe6; border: 2px solid #ffd700; }
+        #storage-stage { background-color: #e6ffe6; border: 2px solid #00cc00; }
+        #output-stage { background-color: #ffe6e6; border: 2px solid #ff4d4d; }
+
+        /* Estilos da Simulação (Fluxo de Informação) */
+        .simulation {
+            margin-top: 20px;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+        .flow-step {
+            padding: 10px;
+            margin: 10px 0;
+            border-left: 5px solid #007bff;
+            background-color: #f9f9f9;
+            border-radius: 4px;
+        }
+        .flow-step strong {
+            color: #007bff;
+            margin-right: 10px;
+        }
+        /* Estilo de seta simples para representar o fluxo */
+        .flow-step:not(:last-child)::after {
+            content: "↓";
+            display: block;
+            font-size: 1.5em;
+            color: #007bff;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🧠 Como um Computador Processa Dados</h1>
+
+    <h2>1. 🗺️ Mapa Mental: O Ciclo de Processamento</h2>
+    
+    <div class="mind-map">
+        
+        <div class="stage" id="input-stage">
+            <h3>📥 Entrada</h3>
+            <ul>
+                <li>Coleta de Dados Brutos</li>
+                <li>Dispositivos: Teclado, Mouse, Microfone</li>
+            </ul>
+        </div>
+        
+        <div class="stage" id="processing-stage">
+            <h3>🧠 Processamento</h3>
+            <ul>
+                <li>Transformação da Informação</li>
+                <li>Componentes: CPU (ALU + UC), RAM</li>
+            </ul>
+        </div>
+        
+        <div class="stage" id="storage-stage">
+            <h3>💾 Armazenamento</h3>
+            <ul>
+                <li>Gravação Persistente</li>
+                <li>Componentes: SSD (NVMe), HDD</li>
+            </ul>
+        </div>
+        
+        <div class="stage" id="output-stage">
+            <h3>📤 Saída</h3>
+            <ul>
+                <li>Apresentação ao Usuário</li>
+                <li>Dispositivos: Monitor, Alto-falantes, Impressora</li>
+            </ul>
+        </div>
+    </div>
+
+    <h2>2. 🎬 Mini Projeto: Simulação do Fluxo de Informação (Rodar um Programa)</h2>
+    
+    <div class="simulation">
+        <div class="flow-step">
+            <strong>1. Entrada:</strong> Comando de clique para abrir o programa.
+            (Componente: **Mouse**)
+        </div>
+        <div class="flow-step">
+            <strong>2. Processamento (Carga):</strong> O programa é copiado do SSD para a **RAM**.
+            (Componente: **SSD** → **RAM**)
+        </div>
+        <div class="flow-step">
+            <strong>3. Processamento (Execução):</strong> A **CPU** lê as instruções na RAM e começa a executá-las.
+            (Componente: **CPU**)
+        </div>
+        <div class="flow-step">
+            <strong>4. Saída:</strong> A informação visual (interface do programa) é enviada para o **Monitor**.
+            (Componente: **Monitor**)
+        </div>
+        <div class="flow-step">
+            <strong>5. Armazenamento (Opcional):</strong> Se o usuário salvar o trabalho, os dados são escritos de volta.
+            (Componente: **SSD/HDD**)
+        </div>
+    </div>
+
+</body>
+</html>
